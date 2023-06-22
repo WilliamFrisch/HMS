@@ -1,0 +1,790 @@
+Html
+<!DOCTYPE html>
+
+<nav>
+  <a href="#" class="logo">
+    <h1>
+      <span class="jab">Jab</span><span class="tv">TV</span
+      ><span class="fist">&#x1F44A;</span>
+    </h1>
+  </a>
+</nav>
+
+<div class="hamburger" id="hamburger">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</div>
+
+<section class="about" id="about">
+  <h3>Watch the Jabs</h3>
+  <p>
+    Our primary objective is to bring live boxing matches to fans all around
+    the world
+  </p>
+
+  <h3>Its not About the Fights Alone!</h3>
+  <p>
+    We also air documentaries specially made for the greats, lifestyle of
+    boxers, news, and more.
+  </p>
+</section>
+
+<section class="stars" id="stars">
+  <div class="stars-gallery">
+    <a href="assets/images/boda--femi.jpg" class="big">
+      <img
+        src="assets/images/boda--femi.jpg"
+        alt="Anthony Joshua"
+        title="AJ"
+      />
+    </a>
+
+    <a href="assets/images/tyson-fury.jpg" class="big">
+      <img
+        src="assets/images/tyson-fury.jpg"
+        alt="Tyson Fury"
+        title="Gypsy King"
+      />
+    </a>
+
+    <a href="assets/images/iron-mike.webp.jpg" class="big">
+      <img
+        src="assets/images/iron-mike.webp.jpg"
+        alt="Iron Mike"
+        title="Iron Mike"
+      />
+    </a>
+
+    <a href="assets/images/ali.jpg" class="big">
+      <img
+        src="assets/images/ali.jpg"
+        alt="Mohammed Ali"
+        title="The Greatest"
+      />
+    </a>
+
+    <a href="assets/images/wilder.jpg" class="big"
+      ><img
+        src="assets/images/wilder.jpg"
+        alt="Deontay Wilder"
+        title="Bronze Bomber"
+      />
+    </a>
+
+    <a href="assets/images/big-george.jpg" class="big">
+      <img
+        src="assets/images/big-george.jpg"
+        alt="George Foreman"
+        title="Big George Foreman"
+      />
+    </a>
+  </div>
+</section>
+
+<script>
+  var lightbox = new SimpleLightbox(".stars-gallery a");
+</script>
+
+<section class="people" id="stakeholders">
+  <div class="stakeholders">
+    <div class="persons">
+      <div class="person-1">
+        <img src="assets/images/john.jpg" alt="John Doe" />
+        <p class="name">John Doe</p>
+        <p class="role">Founder</p>
+      </div>
+      <div class="person-2">
+        <img src="assets/images/jane.jpg" alt="Jane Doe" />
+        <p class="name">Jane Doe</p>
+        <p class="role">MD</p>
+      </div>
+      <div class="person-3">
+        <img src="assets/images/jnr.jpg" alt="John Doe Jnr" />
+        <p class="name">John Doe JNR</p>
+        <p class="role">Head Analyst</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sub" id="sub">
+  <h3>Subscribe to our newsletter for updates</h3>
+  <form action="#">
+    <input
+      type="email"
+      name="email"
+      id="email-sub"
+      class="email-sub"
+      required
+    />
+    <input
+      type="submit"
+      value="Subscribe"
+      id="submit-btn"
+      class="submit-btn"
+    />
+  </form>
+</section>
+
+<section class="social">
+  <h3>Connect with us on Social Media</h3>
+  <div class="socicons">
+    <a href="#"> <ion-icon name="logo-twitter"></ion-icon> </a>
+    <a href="#"> <ion-icon name="logo-instagram"></ion-icon> </a>
+    <a href="#"> <ion-icon name="logo-facebook"></ion-icon> </a>
+  </div>
+</section>
+
+<footer>&copy;2020. All Rights Reserved</footer>
+
+<i class="scroll-up" id="scroll-up"
+     ><img
+       src="assets/icons/icons8-upward-arrow.png"
+       class="socicon up-arrow"
+       alt="up-arrow"
+/></i>
+
+const scrollUp = document.querySelector("#scroll-up");
+
+scrollUp.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
+
+<div class="theme-switch">
+  <input type="checkbox" class="checkbox" id="checkbox" />
+  <label for="checkbox" class="label">
+     <ion-icon name="partly-sunny-outline" class="sun"></ion-icon>
+     <ion-icon name="moon-outline" class="moon"></ion-icon>
+     <div class="switcher"></div>
+  </label>
+</div>
+
+const checkbox = document.querySelector("#checkbox");
+
+checkbox.addEventListener("change", () => {
+  // Toggle website theme
+  document.body.classList.toggle("dark");
+});
+
+const hamburger = document.querySelector("#hamburger");
+const navMenu = document.querySelector("ul");
+
+function openMenu() {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+}
+
+const navLink = document.querySelectorAll("#nav-link");
+
+navLink.forEach((n) => n.addEventListener("click", closeMenu));
+function closeMenu() {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+}
+
+
+<section class="hero">
+  <div class="intro-text">
+    <h1>
+      <span class="hear"> You can Hear the Jabs </span> <br />
+      <span class="connecting"> Connecting</span>
+    </h1>
+    <p>
+      An online streaming platform for boxing matches <br />
+      We also dedicate some special time to throwbacks cuz old is gold
+    </p>
+    <a class="btn red" href="#">Learn More</a>
+    <a class="btn blue" href="#">Subscribe</a>
+  </div>
+  <div class="i-frame">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/sUmM_PFpsvQ"
+      title="YouTube video player"
+      frameborder="10"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    ></iframe>
+    <div class="stand-1"></div>
+    <div class="stand-2"></div>
+  </div>
+</section>
+
+<ul>
+  <li class="nav-item">
+    <a href="#about" class="nav-link" id="nav-link">About</a>
+  </li>
+  <li class="nav-item">
+    <a href="#stars" class="nav-link" id="nav-link">Boxing Stars</a>
+  </li>
+  <li class="nav-item">
+    <a href="#stakeholders" class="nav-link" id="nav-link"
+      >stakeholders</a
+    >
+  </li>
+  <li class="nav-item">
+    <a href="#sub" class="nav-link" id="nav-link">Subscribe</a>
+  </li>
+</ul>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Web page CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Simple lightbox CSS -->
+    <link rel="stylesheet" href="assets/css/simple-lightbox.min.css" />
+
+    <!-- Favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon-16x16.png"
+    />
+
+    <title>JabTV Landing Page</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+
+    <!-- Dark/light theme switcher -->
+
+    <!-- Bars -->
+
+    <!-- Hero section -->
+
+    <!-- About section -->
+
+    <!-- Lightbox image gallery -->
+
+    <!-- Jab TV Stakeholders -->
+
+    <!-- Email subscription -->
+
+    <!-- Social icons -->
+
+    <!-- Scroll to top button -->
+
+    <!-- Web page script -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- Ion icons CDN -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+
+    <!-- Simple lightbox -->
+    <script src="assets/js/simple-lightbox.min.js"></script>
+    <script>
+      // Simple lightbox initializer
+    </script>
+  </body>
+</html>
+
+style css
+
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+/* CSS Variables */
+:root {
+  --normal-font: 400;
+  --bold-font: 600;
+  --bolder-font: 900;
+  --primary-color: #0652dd;
+  --secondary-color: #ea2027;
+  --line-height: 1.7rem;
+  --transition: 0.4s ease-in;
+}
+
+/* Smooth scroll effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
+ body {
+  font-family: "Roboto", sans-serf;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+nav {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  box-shadow: 2px 3px 2px #f1f1f1;
+}
+
+.fist {
+  color: var(--secondary-color);
+}
+
+.jab {
+  color: var(--primary-color);
+}
+
+.tv {
+  color: var(--secondary-color);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 2rem;
+}
+
+.nav-link {
+  font-weight: var(--bold-font);
+}
+
+.intro-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.intro-text h3 {
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  line-height: var(--line-height);
+}
+
+.hear {
+  color: var(--primary-color);
+}
+
+.connecting {
+  color: var(--secondary-color);
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.8rem 0.6rem;
+  border: none;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.red {
+  background-color: var(--secondary-color);
+  margin-right: 1.5rem;
+}
+
+.red:hover {
+  background-color: #f1262d;
+  color: #fff;
+}
+
+.blue {
+  background-color: var(--primary-color);
+}
+
+.blue:hover {
+  background-color: #095cf7;
+  color: #fff;
+}
+
+iframe {
+  max-width: 30rem;
+  border-top: 40px groove var(--primary-color);
+  border-bottom: 40px groove var(--primary-color);
+  border-right: 28px solid var(--secondary-color);
+  border-left: 28px solid var(--secondary-color);
+}
+
+.stand-1 {
+  height: 90px;
+  width: 6px;
+  background-color: var(--primary-color);
+  transform: rotate(40deg);
+  position: relative;
+  top: -16px;
+  left: 200px;
+}
+.stand-2 {
+  height: 90px;
+  width: 6px;
+  background-color: var(--secondary-color);
+  transform: rotate(-40deg);
+  position: relative;
+  top: -105px;
+  left: 255px;
+}
+
+.about {
+  position: relative;
+  background: url("../images/jab-transformed.png") no-repeat top center/cover;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.about h3 {
+  font-size: 3em;
+  margin-bottom: -20px;
+}
+
+.about p {
+  font-size: 1.5em;
+}
+
+.about h3 {
+  text-shadow: 2px 2px 2px #333;
+}
+
+.about p {
+  text-shadow: 2px 2px 2px #333;
+  font-size: 1.8rem;
+}
+
+.stars-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.stars-gallery img,
+.stars-gallery a {
+  width: 100%;
+  height: 100%;
+}
+
+.stars-gallery a:first-child {
+  grid-row: 1/3;
+  grid-column: 1/3;
+}
+
+.stars-gallery a:nth-child(2) {
+  grid-column: 3/5;
+}
+
+
+.people {
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.stakeholders {
+  margin: 2rem auto;
+  max-width: 1100px;
+}
+
+.stakeholders img {
+  border-radius: 0.6rem;
+}
+
+.persons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  gap: 1rem;
+}
+
+.name {
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.role {
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.sub {
+  margin-top: 2rem;
+}
+
+.sub h3 {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+  margin: 0.4rem 2rem;
+}
+
+.email-sub {
+  padding: 0.2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 4px;
+}
+
+.email-sub:focus {
+  border: 1px solid var(--secondary-color);
+  outline: none;
+}
+
+.submit-btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0.3rem;
+  margin: 0 0.5rem;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #095cf7;
+}
+
+.social {
+  text-align: center;
+  margin: 2rem;
+}
+
+.socicons {
+  font-size: 1.3rem;
+}
+
+footer {
+  border-top: 1px solid #f1f1f1;
+  box-shadow: 0px -2px 3px #f1f1f1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 3%;
+  cursor: pointer;
+}
+
+.up-arrow {
+  width: 3rem;
+  height: 3rem;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  width: 50px;
+  height: 29px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  padding: 6px;
+  position: relative;
+}
+
+.switcher {
+  background-color: #fff;
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.moon {
+  color: #ffa502;
+}
+
+.sun {
+  color: #ff4757;
+}
+
+.checkbox:checked + .label .switcher {
+  transform: translateX(24px);
+}
+
+body.dark {
+  background-color: #1e272e;
+}
+
+body.dark .bar {
+  background-color: #fff;
+}
+
+body.dark p {
+  color: #fff;
+}
+
+body.dark h3 {
+  color: #fff;
+}
+
+body.dark nav {
+  background-color: #1e272e;
+  box-shadow: 2px 3px 2px #111010;
+}
+
+body.dark ul {
+  background-color: #1e272e;
+}
+
+body.dark .name {
+  color: var(--primary-color);
+}
+
+body.dark .role {
+  color: var(--secondary-color);
+}
+
+body.dark footer {
+  color: #fff;
+  border-top: 1px solid #111010;
+  box-shadow: 0px -2px 3px #111010;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+ul {
+  background-color: #fff;
+  flex-direction: column;
+  position: fixed;
+  left: 100%;
+  top: 5rem;
+  width: 100%;
+  text-align: center;
+}
+
+ul.active {
+  left: 0;
+}
+
+.nav-item {
+  margin: 2rem 0;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+} 
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.hero {
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.intro-text h1 {
+  font-size: 2.3rem;
+}
+
+.btn {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+iframe {
+  max-width: 26rem;
+}
+
+.stand-1 {
+  left: 170px;
+}
+.stand-2 {
+  left: 225px;
+}
+
+.about {
+  text-align: center;
+}
+
+.persons {
+  grid-template-columns: repeat(1, 1fr);
+} 
+
+
+@media screen and (max-width: 420px) {
+  .hero {
+    max-width: 330px;
+  }
+
+  .intro-text h1 {
+    font-size: 2rem;
+  }
+
+  iframe {
+    max-width: 330px;
+  }
+
+  .stand-1 {
+    left: 140px;
+  }
+  .stand-2 {
+    left: 195px;
+  }
+}
+
